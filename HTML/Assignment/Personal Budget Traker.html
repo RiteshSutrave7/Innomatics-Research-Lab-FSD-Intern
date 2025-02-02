@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Budget Tracker</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        header, footer { background: #f8f9fa; padding: 10px; text-align: center; }
+        section { margin: 20px 0; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background: #007bff; color: white; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Personal Budget Tracker</h1>
+        <nav>
+             <a href="#add">Add Income Expense</a> | <a href="#summary">View Budget summary</a>
+        </nav>
+    </header>
+    <section id="home">
+        <h1 style="text-align: center;">Welcome to Your Budget Tracker</h1>
+        <p style="text-align: center;">This tracker helps you manage your monthly income and expenses. You can add new entries and view a detailed summary of your budget.</p>
+    </section>
+
+    <section id="add">
+        <h2 style="text-align: center;">Add Income/Expense</h2>
+        <form style="text-align: center;">
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" name="amount" required>
+            <br><br>
+            
+            <label for="type">Category:</label>
+            <select id="type" name="type" required>
+                <option value="income">Food</option>
+                <option value="income">Transportation</option>
+                <option value="income">Entertainment</option>
+                <option value="income">Salary</option>
+                <option value="income">Savings</option>
+                <option value="expense">Utilities</option>
+                <option value="income">Housing</option>
+            </select>
+            <br><br>
+           
+            <label for="Description">Description:</label>
+            <input type="charset" id="Description" name="Description" required>
+            <br><br>
+            
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+            <br><br>
+           
+            <label>Type:</label>
+            <input type="radio" name="category" value="Income" required> Income
+            <input type="radio" name="category" value="Transportation"> Expense
+            <br><br>
+           
+            <button type="submit">Add Entry</button>
+        </form>
+    </section>
+
+    <section id="summary">
+        <h2 style="text-align: center;">Budget Summary</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th> 
+                    <th>Amount</th>
+                    <th>Description</th>
+                    <th>Date</th>
+                    <th>Type</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+    
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Food</td>
+                    <td>$200</td>
+                    <td>Groceries for the week</td>
+                    <td>21-01-2024</td>
+                    <td>Expence</td>
+                    <td>Completed</td>
+                    <td class="actions">
+                        <button class="edit">Edit</button>
+                        <button>Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Transportation</td>
+                    <td>$100</td>
+                    <td>Monthly bus pass</td>
+                    <td>04-02-2024</td>
+                    <td>Expence</td>
+                    <td>Completed</td>
+                    <td class="actions">
+                        <button class="edit">Edit</button>
+                        <button>Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Entertainment</td>
+                    <td>$50</td>
+                    <td>Cinema tickets</td>
+                    <td>09-03-2024</td>
+                    <td>Expence</td>
+                    <td>Completed</td>
+                    <td class="actions">
+                        <button class="edit">Edit</button>
+                        <button>Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Salary</td>
+                    <td>$3000</td>
+                    <td>Monthly salary payment</td>
+                    <td>07-05-2024</td>
+                    <td>Income</td>
+                    <td>Completed</td>
+                    <td class="actions">
+                        <button class="edit">Edit</button>
+                        <button>Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Savings</td>
+                    <td>$500</td>
+                    <td>Emergency fund deposit</td>
+                    <td>27-07-2024</td>
+                    <td>Expence</td>
+                    <td>Pending</td>
+                    <td class="actions">
+                        <button class="edit">Edit</button>
+                        <button>Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Utilities</td>
+                    <td>$150</td>
+                    <td>Electricity bill</td>
+                    <td>17-08-2024</td>
+                    <td>Expence</td>
+                    <td>Completed</td>
+                    <td class="actions">
+                        <button class="edit">Edit</button>
+                        <button>Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Utilities</td>
+                    <td>$50</td>
+                    <td>Water bill</td>
+                    <td>27-09-2024</td>
+                    <td>Expence</td>
+                    <td>Pending</td>
+                    <td class="actions">
+                        <button class="edit">Edit</button>
+                        <button>Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Housing</td>
+                    <td>$1200</td>
+                    <td>Monthly rent</td>
+                    <td>17-10-2024</td>
+                    <td>Expence</td>
+                    <td>Completed</td>
+                    <td class="actions">
+                        <button class="edit">Edit</button>
+                        <button>Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Housing</td>
+                    <td>$300</td>
+                    <td>Maintenance fee</td>
+                    <td>27-04-2024</td>
+                    <td>Expence</td>
+                    <td>Pending</td>
+                    <td class="actions">
+                        <button class="edit">Edit</button>
+                        <button>Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Personal Budget Tracker | Version 1.0</p>
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a>
+    </footer>
+</body>
+</html>
