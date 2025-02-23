@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>☕BrewHub Finance System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://static.vecteezy.com/system/resources/thumbnails/002/513/189/small/hand-drawn-coffee-set-graphic-illustration-free-vector.jpg');
+            /*background-size: cover;*/
+            text-align: center;
+            color: white;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            color: black;
+            width: 40%;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        button {
+            padding: 10px;
+            background-color: brown;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <h1>BrewHub Finance System</h1>
+    <div class="container">
+        <label>Select Membership:</label>
+        <button onclick="setMembership('Gold')">Gold Member</button>
+        <button onclick="setMembership('Silver')">Silver Member</button>
+        <button onclick="setMembership('Regular')">Regular Member</button>
+        
+        <br><br>
+        <label>Select Coffee Type:</label>
+        <select id="coffeeType">
+            <option value="Latte">Latte</option>
+            <option value="Espresso">Espresso</option>
+            <option value="Mocha">Mocha</option>
+        </select>
+        
+        <br><br>
+        <label>Select Coffee Size:</label>
+        <select id="coffeeSize">
+            <option value="Small">Small</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
+        </select>
+        
+        <br><br>
+        <label>Quantity:</label>
+        <input type="number" id="quantity" value="1" min="1">
+        
+        <br><br>
+        <label>Add-ons:</label><br>
+        <input type="checkbox" value="0.5" id="whippedCream"> Whipped Cream ($0.5)<br>
+        <input type="checkbox" value="1" id="extraShot"> Extra Shot ($1)<br>
+        <input type="checkbox" value="0.75" id="syrup"> Syrup ($0.75)<br>
+        
+        <br>
+        <label>Promo Code:</label>
+        <input type="text" id="promoCode" placeholder="Enter promo code">
+        
+        <br><br>
+        <button onclick="calculateTotal()">Calculate Total</button>
+    </div>
+    
+    <div class="container hidden" id="orderSummary">
+        <h2>Order Summary</h2>
+        <p id="summaryText"></p>
+        <button onclick="printInvoice()">Print Invoice</button>
+    </div>
+    
+    <script>
+        let membership = "Regular";
+
+        function setMembership(type) {
+            membership = type;
+            alert(type + " membership selected!");
+        }
+
+        function calculateTotal() {
+            let basePrice = { 'Small': 3, 'Medium': 4, 'Large': 5 };
+            let coffeeType = document.getElementById("coffeeType").value;
+            let coffeeSize = document.getElementById("coffeeSize").value;
+            let quantity = parseInt(document.getElementById("quantity").value);
+            let subtotal = basePrice[coffeeSize] * quantity;
+
+            let addOns = 0;
+            if (document.getElementById("whippedCream").checked) addOns += 0.5;
+            if (document.getElementById("extraShot").checked) addOns += 1;
+            if (document.getElementById("syrup").checked) addOns += 0.75;
+            addOns *= quantity;
+            
+            let discount = 0;
+            if (membership === "Gold") discount = subtotal * 0.2;
+            else if (membership === "Silver") discount = subtotal * 0.1;
+            
+            let tax = (subtotal - discount) * 0.05;
+            let total = subtotal - discount + tax + addOns;
+            
+            let promoCode = document.getElementById("promoCode").value;
+            if (promoCode === "COFFEE10") total *= 0.9;
+
+            document.getElementById("summaryText").innerHTML =
+                `Coffee: ${coffeeType} (${coffeeSize})<br>
+                Quantity: ${quantity}<br>
+                Add-ons: $${addOns.toFixed(2)}<br>
+                Subtotal: $${subtotal.toFixed(2)}<br>
+                Discount: $${discount.toFixed(2)}<br>
+                Tax: $${tax.toFixed(2)}<br>
+                <b>Total: $${total.toFixed(2)}</b>`;
+
+            document.getElementById("orderSummary").classList.remove("hidden");
+        }
+
+        function printInvoice() {
+            window.print();
+        }
+    </script>
+</body>
+</html>
