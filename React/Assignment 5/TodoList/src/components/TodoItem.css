@@ -1,0 +1,119 @@
+.todo-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .todo-item:last-child {
+    border-bottom: none;
+  }
+  
+  .todo-item.completed .todo-label {
+    text-decoration: line-through;
+    color: #777;
+  }
+  
+  .view {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .toggle {
+    margin-right: 12px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .toggle:checked {
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+  }
+  
+  .toggle:checked::before {
+    content: '\2713'; /* Checkmark character */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 14px;
+  }
+  
+  
+  .todo-label {
+    flex-grow: 1;
+    padding: 8px;
+    word-break: break-word; /* Prevents long words from breaking layout */
+  }
+  
+  
+  .destroy {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='%23cc9a9a' x='0px' y='0px' viewBox='0 0 22 22' width='22px' height='22px'><g><g><path  d='M16.1,3.6h-1.9v-3.3c0-0.2-0.4-0.3-0.6-0.1l-1.4,1.4l-1.4-1.4c-0.2-0.2-0.5-0.1-0.6,0.1v3.3H6.1V3.6c0-0.2-0.4-0.3-0.6-0.1l-1.4,1.4l-1.4-1.4c-0.2-0.2-0.5-0.1-0.6,0.1v3.3H2.3c-0.5,0-0.9,0.4-0.9,0.9v16.3c0,0.5,0.4,0.9,0.9,0.9h17.3c0.5,0,0.9-0.4,0.9-0.9V4.5C17,4,16.6,3.6,16.1,3.6z M15.1,19.9H3.2V6.5h11.9V19.9z M12.1,8.6l-2.2,2.2l2.2,2.2c0.2,0.2,0.2,0.5,0,0.7c-0.1,0.1-0.2,0.1-0.3,0.1c-0.1,0-0.2,0-0.3-0.1l-2.2-2.2l-2.2,2.2c-0.2,0.2-0.5,0.2-0.7,0c-0.2-0.2-0.2-0.5,0-0.7l2.2-2.2l-2.2-2.2c-0.2-0.2-0.2-0.5,0-0.7c0.2-0.2,0.5-0.2,0.7,0l2.2,2.2l2.2-2.2c0.2-0.2,0.5-0.2,0.7,0c0.2,0.2,0.2,0.5,0,0.7L12.1,8.6z M12.1,8.6' fill-rule='evenodd' clip-rule='evenodd'></path></g></g></svg>");
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 4px;
+    right: 10px;
+    float: right;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+  }
+  
+  .destroy:hover {
+    opacity: 1;
+  }
+  
+  .todo-item:hover .destroy {
+    opacity: 0.8;
+  }
+  
+  
+  .edit-input {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-left: 5px;
+  }
+  
+  .editing-buttons {
+    margin-left: auto; /* Push buttons to the right */
+    margin-right: 10px;
+    display: flex;
+    gap: 5px; /* Space between buttons */
+  }
+  
+  .save-button, .cancel-button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  .save-button {
+    background-color: #5cb85c;
+    color: white;
+  }
+  
+  .cancel-button {
+    background-color: #f44336;
+    color: white;
+  }
