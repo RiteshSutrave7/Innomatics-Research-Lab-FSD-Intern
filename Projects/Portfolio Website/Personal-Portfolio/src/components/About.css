@@ -1,0 +1,70 @@
+/* src/components/About.css */
+.about {
+    background-color: #112240; /* Slightly darker background for contrast */
+    padding: 80px 20px; /* Increased padding */
+    border-radius: 0; /* No border radius */
+    box-shadow: none; /* No box shadow */
+    margin-bottom: 0; /* No bottom margin */
+    padding-left: 250px; /* Account for sidebar width */
+  }
+  
+  .about h2 {
+    margin-bottom: 30px;
+  }
+  
+  .about p {
+    text-align: left;
+    margin-bottom: 20px;
+    color: #8892b0; /* Paragraph text color */
+    max-width: 800px; /* Limit width for readability */
+  }
+  
+  .about .about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two column layout for content and image */
+    gap: 50px;
+    align-items: center; /* Vertically align items in grid */
+  }
+  
+  .about .about-text {
+    text-align: left;
+  }
+  
+  .about .profile-image-about {
+    width: 250px; /* Adjust image size as needed */
+    height: 250px;
+    border-radius: 5px; /* Slightly rounded corners */
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for image */
+  }
+  
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .about {
+      padding: 60px 15px;
+      padding-left: 0; /* Remove sidebar padding on smaller screens */
+      text-align: center; /* Center text on smaller screens */
+    }
+  
+    .about h2 {
+      margin-bottom: 20px;
+      text-align: center; /* Center heading on smaller screens */
+    }
+  
+    .about .about-content {
+      grid-template-columns: 1fr; /* Stack content and image on smaller screens */
+      gap: 30px;
+    }
+  
+    .about .about-text {
+      text-align: left; /* Revert text align to left for content block */
+    }
+  
+    .about .profile-image-about {
+      width: 200px; /* Smaller image on smaller screens */
+      height: 200px;
+      margin: 0 auto; /* Center image on smaller screens */
+      display: block; /* Ensure image is block to center with auto margins */
+    }
+  }

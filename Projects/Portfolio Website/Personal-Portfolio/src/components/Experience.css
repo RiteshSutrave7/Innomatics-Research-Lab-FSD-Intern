@@ -1,0 +1,89 @@
+/* src/components/Experience.css */
+.experience {
+    background-color: #0a192f; /* Match background */
+    padding: 80px 20px;
+    border-radius: 0;
+    box-shadow: none;
+    margin-bottom: 0;
+    padding-left: 250px; /* Sidebar padding */
+  }
+  
+  .experience h2 {
+    margin-bottom: 30px;
+    text-align: left; /* Left align heading */
+  }
+  
+  .experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 35px; /* Adjusted gap */
+  }
+  
+  .experience-item {
+    text-align: left;
+    padding: 20px;
+    border-left: 2px solid #64ffda; /* Teal vertical line for timeline effect */
+    padding-left: 30px; /* Indent content for timeline effect */
+    position: relative; /* For pseudo-element circle */
+  }
+  
+  .experience-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px; /* Adjust vertical position of circle */
+    transform: translateX(-50%); /* Center circle on border line */
+    width: 10px;
+    height: 10px;
+    background-color: #64ffda; /* Teal circle */
+    border-radius: 50%;
+  }
+  
+  
+  .experience-item h3 {
+    margin-bottom: 8px; /* Adjusted margin */
+    color: #ccd6f6; /* Role title color */
+    font-size: 1.4rem; /* Adjusted role title size */
+  }
+  
+  .experience-item .company {
+    font-style: normal; /* Remove italic style */
+    color: #64ffda; /* Accent color for company */
+    margin-bottom: 10px;
+    font-weight: bold; /* Make company name bold */
+  }
+  
+  .experience-item .description {
+    color: #8892b0; /* Description color */
+  }
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .experience {
+      padding: 60px 15px;
+      padding-left: 0; /* Remove sidebar padding */
+      text-align: center; /* Center text on smaller screens */
+    }
+  
+    .experience h2 {
+      text-align: center; /* Center heading */
+    }
+  
+    .experience-list {
+      gap: 25px; /* Adjust gap on smaller screens */
+    }
+  
+    .experience-item {
+      border-left: none; /* Remove vertical line on smaller screens */
+      padding-left: 0; /* Remove indent on smaller screens */
+      padding: 15px; /* Standard padding for item */
+    }
+  
+    .experience-item::before {
+      display: none; /* Hide circles on smaller screens */
+    }
+  
+    .experience-item h3 {
+      font-size: 1.3rem; /* Adjust role title size */
+    }
+  }

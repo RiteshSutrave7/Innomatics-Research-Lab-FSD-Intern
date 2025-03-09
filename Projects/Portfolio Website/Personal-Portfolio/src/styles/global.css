@@ -1,0 +1,133 @@
+/* src/styles/global.css */
+
+/* Resetting default browser styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* src/index.css */
+
+html {
+  scroll-behavior: smooth; /* Enable smooth scrolling for the entire page */
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif; /* Or your preferred font */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #0a192f; /* Your website background color */
+  color: #ccd6f6; /* Your website text color */
+}
+
+/* ... rest of your global styles ... */
+html {
+  scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+
+body {
+  font-family: 'Roboto Mono', monospace; /* Example: Roboto Mono, adjust as needed */
+  line-height: 1.6;
+  color: #ccd6f6; /* Light text color for dark theme */
+  background-color: #0a192f; /* Dark background color */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Basic container styling for sections */
+section {
+  padding: 80px 20px; /* Increased padding for sections */
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left; /* Left align text in sections */
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px; /* Increased margin below headings */
+  color: #ccd6f6; /* Heading text color */
+  position: relative;
+  padding-bottom: 10px;
+  display: inline-block;
+  font-weight: bold; /* Make headings bold */
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100px; /* Shorter underline for headings */
+  height: 2px;
+  background-color: #64ffda; /* Teal/Cyan accent color */
+}
+
+h3 {
+  font-size: 1.7rem; /* Adjusted h3 size */
+  margin-bottom: 15px;
+  color: #ccd6f6; /* Sub-heading color */
+  font-weight: bold; /* Make sub-headings bold */
+}
+
+p {
+  margin-bottom: 20px; /* Increased paragraph margin */
+  color: #8892b0; /* Slightly muted paragraph text color */
+  font-size: 1.1rem; /* Slightly larger paragraph font size */
+}
+
+a {
+  color: #64ffda; /* Accent color for links */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #a8b2d1; /* Lighter link color on hover */
+}
+
+/* Button styling */
+button,
+.submit-button,
+input[type="submit"] {
+  background-color: transparent; /* Transparent button background */
+  color: #64ffda; /* Accent color for button text */
+  padding: 12px 25px; /* Adjusted button padding */
+  border: 1px solid #64ffda; /* Bordered button style */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: 'Roboto Mono', monospace; /* Match button font to body font */
+}
+
+button:hover,
+.submit-button:hover,
+input[type="submit"]:hover {
+  background-color: rgba(100, 255, 218, 0.1); /* Light teal background on hover */
+  color: #ccd6f6; /* Text color on hover */
+}
+
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  section {
+    padding: 60px 15px;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+}

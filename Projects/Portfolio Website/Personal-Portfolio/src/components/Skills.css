@@ -1,0 +1,199 @@
+/* src/components/Skills.css */
+.skills {
+    padding-top: 80px; /* Adjust padding as needed */
+    padding-bottom: 80px;
+    background-color: #112240;
+    color: #ccd6f6;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+  
+  .skills h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #ccd6f6;
+  }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Add horizontal padding */
+  }
+  
+  .skill-item {
+    background-color: #1a2d50; /* Slightly lighter background for skill items */
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .skill-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 10px 25px rgba(100, 255, 218, 0.3); /* Stronger shadow on hover */
+  }
+  
+  .skill-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem; /* Larger icon size */
+    color: #64ffda; /* Accent color for icons */
+    margin-bottom: 15px;
+    height: 60px; /* Fixed height for icon container */
+  }
+  
+  .skill-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #ccd6f6; /* Skill name color */
+  }
+  
+  .skill-proficiency {
+    font-size: 1rem;
+    color: #a8b2d1; /* Muted proficiency color */
+    display: block; /* Make it a block element */
+    margin-top: 8px; /* Spacing above proficiency */
+    padding: 8px 15px;
+    background-color: rgba(100, 255, 218, 0.1); /* Subtle background for proficiency */
+    border-radius: 5px;
+  }
+  
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .skills h2 {
+      font-size: 2rem; /* Smaller heading on mobile */
+      margin-bottom: 30px;
+    }
+  
+    .skills-grid {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust min-width for mobile */
+      gap: 20px;
+      padding: 0 10px; /* Adjust horizontal padding on mobile */
+    }
+  
+    .skill-item {
+      padding: 20px; /* Adjust padding on mobile */
+    }
+  
+    .skill-icon {
+      font-size: 2rem; /* Smaller icon size on mobile */
+      margin-bottom: 10px;
+      height: 50px; /* Adjust icon container height on mobile */
+    }
+  
+    .skill-item h3 {
+      font-size: 1.1rem; /* Smaller skill name font on mobile */
+    }
+  
+    .skill-proficiency {
+      font-size: 0.9rem; /* Smaller proficiency font on mobile */
+      padding: 6px 10px; /* Adjust padding on mobile */
+      margin-top: 6px; /* Adjust spacing on mobile */
+    }
+  }/* src/components/Skills.css */
+.skills {
+    padding-top: 80px; /* Adjust padding as needed */
+    padding-bottom: 80px;
+    background-color: #112240;
+    color: #ccd6f6;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+  
+  .skills h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #ccd6f6;
+  }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Add horizontal padding */
+  }
+  
+  .skill-item {
+    background-color: #1a2d50; /* Slightly lighter background for skill items */
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .skill-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 10px 25px rgba(100, 255, 218, 0.3); /* Stronger shadow on hover */
+  }
+  
+  .skill-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem; /* Larger icon size */
+    color: #64ffda; /* Accent color for icons */
+    margin-bottom: 15px;
+    height: 60px; /* Fixed height for icon container */
+  }
+  
+  .skill-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #ccd6f6; /* Skill name color */
+  }
+  
+  .skill-proficiency {
+    font-size: 1rem;
+    color: #a8b2d1; /* Muted proficiency color */
+    display: block; /* Make it a block element */
+    margin-top: 8px; /* Spacing above proficiency */
+    padding: 8px 15px;
+    background-color: rgba(100, 255, 218, 0.1); /* Subtle background for proficiency */
+    border-radius: 5px;
+  }
+  
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .skills h2 {
+      font-size: 2rem; /* Smaller heading on mobile */
+      margin-bottom: 30px;
+    }
+  
+    .skills-grid {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust min-width for mobile */
+      gap: 20px;
+      padding: 0 10px; /* Adjust horizontal padding on mobile */
+    }
+  
+    .skill-item {
+      padding: 20px; /* Adjust padding on mobile */
+    }
+  
+    .skill-icon {
+      font-size: 2rem; /* Smaller icon size on mobile */
+      margin-bottom: 10px;
+      height: 50px; /* Adjust icon container height on mobile */
+    }
+  
+    .skill-item h3 {
+      font-size: 1.1rem; /* Smaller skill name font on mobile */
+    }
+  
+    .skill-proficiency {
+      font-size: 0.9rem; /* Smaller proficiency font on mobile */
+      padding: 6px 10px; /* Adjust padding on mobile */
+      margin-top: 6px; /* Adjust spacing on mobile */
+    }
+  }

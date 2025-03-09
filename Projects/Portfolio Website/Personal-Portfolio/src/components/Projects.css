@@ -1,0 +1,36 @@
+/* src/components/Projects.css */
+.projects {
+    padding: 80px 20px;
+    margin-bottom: 0;
+    padding-left: 250px; /* Sidebar padding */
+    background-color: #112240; /* Darker background for contrast */
+  }
+  
+  .projects h2 {
+    margin-bottom: 30px;
+    text-align: left; /* Left align heading */
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Adjusted min width */
+    gap: 35px; /* Adjusted gap */
+  }
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .projects {
+      padding: 60px 15px;
+      padding-left: 0; /* Remove sidebar padding */
+      text-align: center; /* Center text on smaller screens */
+      background-color: #0a192f; /* Revert background to main dark theme on small screens */
+    }
+  
+    .projects h2 {
+      text-align: center; /* Center heading on smaller screens */
+    }
+  
+    .projects-grid {
+      grid-template-columns: 1fr; /* Stack projects on smaller screens */
+    }
+  }

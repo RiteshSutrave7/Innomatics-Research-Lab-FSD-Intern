@@ -1,0 +1,195 @@
+/* src/components/Home.css */
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding-left: 250px; /* Sidebar width */
+    background-color: #112240;
+    color: #ccd6f6;
+    position: relative; /* For gradient background positioning */
+    overflow: hidden; /* To contain gradient animation */
+  }
+  
+  /* Animated Gradient Background */
+  .home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(45deg, #112240, #1e3c72, #3b5998, #647ac7);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    z-index: -1; /* Place gradient behind content */
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .profile-image {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 40px;
+    border: 3px solid #64ffda;
+    box-shadow: 0 0 20px rgba(100, 255, 218, 0.3);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .profile-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(100, 255, 218, 0.5);
+  }
+  
+  .profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .introduction {
+    text-align: left;
+    max-width: 700px;
+  }
+  
+  .introduction h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    opacity: 0; /* For fade-in animation */
+    transform: translateY(20px);
+    animation: fadeIn 0.8s 0.2s ease-out forwards; /* Added delay */
+  }
+  
+  .introduction h2 {
+    font-size: 2rem;
+    color: #64ffda;
+    margin-bottom: 20px;
+    opacity: 0; /* For fade-in animation */
+    transform: translateY(20px);
+    animation: fadeIn 0.8s 0.4s ease-out forwards; /* Added delay */
+  }
+  
+  .introduction p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    opacity: 0; /* For fade-in animation */
+    transform: translateY(20px);
+    animation: fadeIn 0.8s 0.6s ease-out forwards; /* Added delay */
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .social-links-home {
+    margin-top: 25px;
+    opacity: 0; /* For fade-in animation */
+    transform: translateY(20px);
+    animation: fadeIn 0.8s 0.8s ease-out forwards; /* Added delay */
+  }
+  
+  .social-links-home a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    color: #64ffda;
+    margin: 0 10px;
+    transition: border-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .social-links-home a:hover {
+    border-color: #64ffda;
+    color: #ccd6f6;
+    transform: scale(1.1);
+  }
+  
+  .resume-download-button {
+    margin-top: 30px;
+    opacity: 0; /* For fade-in animation */
+    transform: translateY(20px);
+    animation: fadeIn 0.8s 1s ease-out forwards; /* Added delay - longest delay */
+  }
+  
+  
+  .resume-download-button a {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: transparent;
+    color: #64ffda;
+    border: 2px solid #64ffda;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .resume-download-button a:hover {
+    background-color: #64ffda;
+    color: #0b192f; /* Dark background color for text on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(100, 255, 218, 0.4);
+  }
+  
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .home {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding-left: 0;
+    }
+  
+    .profile-image {
+      margin-right: 0;
+      margin-bottom: 30px;
+      width: 180px;
+      height: 180px;
+    }
+  
+    .introduction {
+      text-align: center;
+      max-width: 90%; /* Adjust text width on smaller screens */
+    }
+  
+    .introduction h1 {
+      font-size: 2.5rem; /* Smaller heading on mobile */
+    }
+  
+    .introduction h2 {
+      font-size: 1.7rem; /* Smaller subheading on mobile */
+    }
+  
+    .introduction p {
+      font-size: 1rem; /* Slightly smaller paragraph text on mobile */
+    }
+  
+    .social-links-home {
+      margin-top: 20px; /* Adjust spacing on mobile */
+    }
+  
+    .resume-download-button {
+      margin-top: 25px; /* Adjust spacing on mobile */
+    }
+  }

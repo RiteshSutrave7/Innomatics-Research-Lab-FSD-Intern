@@ -1,0 +1,105 @@
+/* src/components/Contact.css */
+.contact {
+    background-color: #112240; /* Darker background for contrast */
+    padding: 80px 20px;
+    border-radius: 0;
+    margin-bottom: 0;
+    padding-left: 250px; /* Sidebar padding */
+  }
+  
+  .contact h2 {
+    margin-bottom: 30px;
+    text-align: left; /* Left align heading */
+  }
+  
+  .contact p {
+    margin-bottom: 30px; /* Increased margin below intro paragraph */
+    color: #8892b0;
+    max-width: 600px; /* Limit width of intro paragraph */
+    text-align: left; /* Left align intro paragraph */
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin-bottom: 30px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: normal; /* Remove bold from labels */
+    color: #ccd6f6; /* Label color */
+    font-size: 1.1rem; /* Adjusted label size */
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 12px; /* Adjusted input padding */
+    border: 1px solid #a8b2d1; /* Muted border color for inputs */
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #1e375b; /* Darker input background */
+    color: #ccd6f6; /* Input text color */
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none; /* Remove default focus outline */
+    border-color: #64ffda; /* Accent color for focus border */
+    box-shadow: 0 0 0 2px rgba(100, 255, 218, 0.3); /* Subtle focus shadow */
+  }
+  
+  
+  .submit-button {
+    align-self: flex-start;
+    margin-top: 10px; /* Add margin above submit button */
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: flex-start; /* Align social links to start */
+    gap: 25px; /* Adjusted gap */
+    font-size: 1.5rem; /* Adjusted icon size */
+    margin-top: 30px; /* Space above social links */
+  }
+  
+  .social-links a {
+    color: #ccd6f6; /* Social icon color */
+    transition: color 0.3s ease;
+  }
+  
+  .social-links a:hover {
+    color: #64ffda; /* Accent color on hover */
+  }
+  
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .contact {
+      padding: 60px 15px;
+      padding-left: 0; /* Remove sidebar padding */
+      text-align: center; /* Center text on smaller screens */
+    }
+  
+    .contact h2 {
+      text-align: center; /* Center heading */
+    }
+  
+    .contact p {
+      text-align: center; /* Center intro paragraph */
+    }
+  
+  
+    .social-links {
+      justify-content: center; /* Center social links on smaller screens */
+      margin-top: 20px; /* Adjust margin for smaller screens */
+    }
+  }

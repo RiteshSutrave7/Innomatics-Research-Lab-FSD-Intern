@@ -1,0 +1,9 @@
+/* src/components/Footer.css */
+.footer {
+    background-color: #1e375b; /* Darker footer background */
+    color: #a8b2d1; /* Muted footer text color */
+    text-align: center;
+    padding: 25px; /* Adjusted footer padding */
+    font-size: 0.9rem;
+    margin-top: 80px; /* Add top margin to separate from content */
+  }
